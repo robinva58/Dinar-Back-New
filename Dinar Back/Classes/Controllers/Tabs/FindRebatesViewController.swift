@@ -105,16 +105,16 @@ class FindRebatesViewController: BaseViewController, UITableViewDataSource, UITa
     }
     
     func fetchCategories(){
-        
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.getCategories(completionHandler: { (success, data, error) in
-            
-            DispatchQueue.main.async {
-                self.hideProgressView()
-                if(success){
-                    if data != nil{
-                        self.categories = (data as? [[String:Any]])!
-                        
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if(success){
+                if data != nil{
+                    self.categories = (data as? [[String:Any]])!
+                    DispatchQueue.main.async {
                         self.tableVw.reloadData()
                     }
                 }

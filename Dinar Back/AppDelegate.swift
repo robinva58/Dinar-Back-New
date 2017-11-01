@@ -24,7 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.customizeAppAppearance()
-        
+        SVProgressHUD.setForegroundColor(UIColor.appGreenColor())
+        SVProgressHUD.setBackgroundColor(UIColor.darkGray)
+        SVProgressHUD.setRingRadius(30)
+        SVProgressHUD.setRingThickness(8.0)
+        SVProgressHUD.setFadeInAnimationDuration(0.8)
+        SVProgressHUD.setFadeOutAnimationDuration(0.5)
         
         return SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
