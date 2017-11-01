@@ -15,7 +15,7 @@ class FeaturedViewController: BaseViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableVw:UITableView!
     var storesData:[[String:Any]]!
     var bannersData:[String:Any]!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +43,7 @@ class FeaturedViewController: BaseViewController, UITableViewDataSource, UITable
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+                
         if(!self.shouldAddFavorites() && self.storesData == nil){
             self.fetchFeaturedRebates()
         }
@@ -86,29 +86,32 @@ class FeaturedViewController: BaseViewController, UITableViewDataSource, UITable
     }
     
     func fetchFeaturedRebates(){
-//        SVProgressHUD.show()
-        PKGIFHUD.setGifWithImageName("Loading.gif")
-        PKGIFHUD.showWithOverlay()
+
+        self.showProgressView()
+        
         RestAPI.shared.getFeatured(completionHandler:  { (success, data, error) in
-//            SVProgressHUD.dismiss()
-            PKGIFHUD.dismiss()
-            if(success){
-                if data != nil{
-                    if let resp = data as? [String:Any]{
-                        DispatchQueue.main.async {
-                            if let bannersData = resp["banners"] as? [String:Any]{
-                                self.bannersData = bannersData
-                                if let top = bannersData["top"] as? [[String:Any]]{
-                                    self.topBannerView.bindData(params: top)
+
+            DispatchQueue.main.async {
+                self.hideProgressView()
+                
+                if(success){
+                    if data != nil{
+                        if let resp = data as? [String:Any]{
+                            DispatchQueue.main.async {
+                                if let bannersData = resp["banners"] as? [String:Any]{
+                                    self.bannersData = bannersData
+                                    if let top = bannersData["top"] as? [[String:Any]]{
+                                        self.topBannerView.bindData(params: top)
+                                    }
+                                    if let bottom = bannersData["bottom"] as? [[String:Any]]{
+                                        self.bottomBannerView.bindData(params: bottom)
+                                    }
                                 }
-                                if let bottom = bannersData["bottom"] as? [[String:Any]]{
-                                    self.bottomBannerView.bindData(params: bottom)
+                                if let storesData = resp["featured_stores"] as? [[String:Any]]{
+                                    self.storesData = storesData
                                 }
+                                self.tableVw.reloadData()
                             }
-                            if let storesData = resp["featured_stores"] as? [[String:Any]]{
-                                self.storesData = storesData
-                            }
-                            self.tableVw.reloadData()
                         }
                     }
                 }

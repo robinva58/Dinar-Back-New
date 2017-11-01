@@ -15,7 +15,21 @@
 		C01CCC7C1F999F070033F5CD /* Dinar_Back_Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C01CCC7B1F999F070033F5CD /* Dinar_Back_Intro.mp4 */; };
 		C01CCC821FA02D980033F5CD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCC811FA02D980033F5CD /* LaunchViewController.swift */; };
 		C01CCC861FA0C8910033F5CD /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCC851FA0C8910033F5CD /* iOSDevCenters+GIF.swift */; };
-		C0BB9A7D1FA2DEBD0018E1BF /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = C0BB9A7C1FA2DEBD0018E1BF /* Loading.gif */; };
+		C0669D941FA8BEDA00349A2C /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D871FA8BEDA00349A2C /* check.json */; };
+		C0669D951FA8BEDA00349A2C /* check_solid_stop.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D881FA8BEDA00349A2C /* check_solid_stop.json */; };
+		C0669D961FA8BEDA00349A2C /* introduction_view_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D891FA8BEDA00349A2C /* introduction_view_animation.json */; };
+		C0669D971FA8BEDA00349A2C /* loader_data.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D8A1FA8BEDA00349A2C /* loader_data.json */; };
+		C0669D981FA8BEDA00349A2C /* loader_ring.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D8B1FA8BEDA00349A2C /* loader_ring.json */; };
+		C0669D991FA8BEDA00349A2C /* m-com_interstitial_sending.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D8C1FA8BEDA00349A2C /* m-com_interstitial_sending.json */; };
+		C0669D9A1FA8BEDA00349A2C /* m-com_interstitial_welcome-back.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D8D1FA8BEDA00349A2C /* m-com_interstitial_welcome-back.json */; };
+		C0669D9B1FA8BEDA00349A2C /* my-rebates-tab_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D8E1FA8BEDA00349A2C /* my-rebates-tab_animation.json */; };
+		C0669D9C1FA8BEDA00349A2C /* nav_beacon.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D8F1FA8BEDA00349A2C /* nav_beacon.json */; };
+		C0669D9D1FA8BEDA00349A2C /* searching_for_rebates.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D901FA8BEDA00349A2C /* searching_for_rebates.json */; };
+		C0669D9E1FA8BEDA00349A2C /* sending_receipt_data.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D911FA8BEDA00349A2C /* sending_receipt_data.json */; };
+		C0669D9F1FA8BEDA00349A2C /* sending_receipt_finish.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D921FA8BEDA00349A2C /* sending_receipt_finish.json */; };
+		C0669DA01FA8BEDA00349A2C /* welcome_to_5.json in Resources */ = {isa = PBXBuildFile; fileRef = C0669D931FA8BEDA00349A2C /* welcome_to_5.json */; };
+		C0669DA21FA8E2D300349A2C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0669DA11FA8E2D200349A2C /* LoadingView.xib */; };
+		C0669DA41FA8E31A00349A2C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0669DA31FA8E31A00349A2C /* LoadingView.swift */; };
 		DC0EC5451F30A5DE0055DAD4 /* StoreCategoryContentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EC5441F30A5DE0055DAD4 /* StoreCategoryContentContainer.swift */; };
 		DC33E8BF1F6FE075003B77BA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33E8BE1F6FE075003B77BA /* Array+Extension.swift */; };
 		DC33E8C31F714021003B77BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC33E8C21F714021003B77BA /* Assets.xcassets */; };
@@ -96,15 +110,26 @@
 		319D2FC71F8797510085B99E /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		319D2FC81F8797510085B99E /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		31AE5CCF1F90FFCC00C3D263 /* BarCodeEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeEnterViewController.swift; sourceTree = "<group>"; };
-		4E5926191FA95337004DC3E8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4E59261A1FA95337004DC3E8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Login.strings; sourceTree = "<group>"; };
-		4E59261B1FA95337004DC3E8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		8D51AA7E58BEE0D0D5B82C07 /* Pods-Dinar Back.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinar Back.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dinar Back/Pods-Dinar Back.debug.xcconfig"; sourceTree = "<group>"; };
 		B9A1CFE829A036375E9CCC36 /* Pods_Dinar_Back.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinar_Back.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01CCC7B1F999F070033F5CD /* Dinar_Back_Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dinar_Back_Intro.mp4; sourceTree = "<group>"; };
 		C01CCC811FA02D980033F5CD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C01CCC851FA0C8910033F5CD /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
-		C0BB9A7C1FA2DEBD0018E1BF /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
+		C0669D871FA8BEDA00349A2C /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		C0669D881FA8BEDA00349A2C /* check_solid_stop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check_solid_stop.json; sourceTree = "<group>"; };
+		C0669D891FA8BEDA00349A2C /* introduction_view_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = introduction_view_animation.json; sourceTree = "<group>"; };
+		C0669D8A1FA8BEDA00349A2C /* loader_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_data.json; sourceTree = "<group>"; };
+		C0669D8B1FA8BEDA00349A2C /* loader_ring.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_ring.json; sourceTree = "<group>"; };
+		C0669D8C1FA8BEDA00349A2C /* m-com_interstitial_sending.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "m-com_interstitial_sending.json"; sourceTree = "<group>"; };
+		C0669D8D1FA8BEDA00349A2C /* m-com_interstitial_welcome-back.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "m-com_interstitial_welcome-back.json"; sourceTree = "<group>"; };
+		C0669D8E1FA8BEDA00349A2C /* my-rebates-tab_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "my-rebates-tab_animation.json"; sourceTree = "<group>"; };
+		C0669D8F1FA8BEDA00349A2C /* nav_beacon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nav_beacon.json; sourceTree = "<group>"; };
+		C0669D901FA8BEDA00349A2C /* searching_for_rebates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searching_for_rebates.json; sourceTree = "<group>"; };
+		C0669D911FA8BEDA00349A2C /* sending_receipt_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sending_receipt_data.json; sourceTree = "<group>"; };
+		C0669D921FA8BEDA00349A2C /* sending_receipt_finish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sending_receipt_finish.json; sourceTree = "<group>"; };
+		C0669D931FA8BEDA00349A2C /* welcome_to_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome_to_5.json; sourceTree = "<group>"; };
+		C0669DA11FA8E2D200349A2C /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		C0669DA31FA8E31A00349A2C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DC0EC5441F30A5DE0055DAD4 /* StoreCategoryContentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCategoryContentContainer.swift; sourceTree = "<group>"; };
 		DC32F2151F30CAD4000D5F17 /* Dinar Back-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dinar Back-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC33E8BE1F6FE075003B77BA /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -213,6 +238,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C0669D861FA8BEDA00349A2C /* Animation Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0669D871FA8BEDA00349A2C /* check.json */,
+				C0669D881FA8BEDA00349A2C /* check_solid_stop.json */,
+				C0669D891FA8BEDA00349A2C /* introduction_view_animation.json */,
+				C0669D8A1FA8BEDA00349A2C /* loader_data.json */,
+				C0669D8B1FA8BEDA00349A2C /* loader_ring.json */,
+				C0669D8C1FA8BEDA00349A2C /* m-com_interstitial_sending.json */,
+				C0669D8D1FA8BEDA00349A2C /* m-com_interstitial_welcome-back.json */,
+				C0669D8E1FA8BEDA00349A2C /* my-rebates-tab_animation.json */,
+				C0669D8F1FA8BEDA00349A2C /* nav_beacon.json */,
+				C0669D901FA8BEDA00349A2C /* searching_for_rebates.json */,
+				C0669D911FA8BEDA00349A2C /* sending_receipt_data.json */,
+				C0669D921FA8BEDA00349A2C /* sending_receipt_finish.json */,
+				C0669D931FA8BEDA00349A2C /* welcome_to_5.json */,
+			);
+			path = "Animation Files";
+			sourceTree = "<group>";
+		};
 		C0BB9A6C1FA2C8210018E1BF /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +281,7 @@
 		DC50266C1F263785004F7EE7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C0BB9A7C1FA2DEBD0018E1BF /* Loading.gif */,
+				C0669D861FA8BEDA00349A2C /* Animation Files */,
 				C01CCC7B1F999F070033F5CD /* Dinar_Back_Intro.mp4 */,
 				DC50266D1F263785004F7EE7 /* Login.plist */,
 			);
@@ -397,6 +442,8 @@
 				DC33E8CA1F716B3B003B77BA /* StoresForCategoryTableViewCell.xib */,
 				319D2FC71F8797510085B99E /* SearchResultTableViewCell.swift */,
 				319D2FC81F8797510085B99E /* SearchResultTableViewCell.xib */,
+				C0669DA11FA8E2D200349A2C /* LoadingView.xib */,
+				C0669DA31FA8E31A00349A2C /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,7 +483,7 @@
 				TargetAttributes = {
 					DCA2963B1F1E339200FF4E3A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = EMPCT86ARG;
+						DevelopmentTeam = 4W972XBT8Y;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -468,20 +515,33 @@
 				DC6DED861F2A34B30034B2B0 /* JTSBannerView.xib in Resources */,
 				DC50266E1F263785004F7EE7 /* Login.plist in Resources */,
 				DCA2967B1F1E348600FF4E3A /* Login.storyboard in Resources */,
+				C0669D9E1FA8BEDA00349A2C /* sending_receipt_data.json in Resources */,
+				C0669D961FA8BEDA00349A2C /* introduction_view_animation.json in Resources */,
+				C0669D9C1FA8BEDA00349A2C /* nav_beacon.json in Resources */,
 				DCE1E4E51F2B612800CF29DC /* CategorySelectButton.xib in Resources */,
-				C0BB9A7D1FA2DEBD0018E1BF /* Loading.gif in Resources */,
 				DC33E8CB1F716B3B003B77BA /* StoresForCategoryTableViewCell.xib in Resources */,
 				DC33E8C31F714021003B77BA /* Assets.xcassets in Resources */,
+				C0669D9F1FA8BEDA00349A2C /* sending_receipt_finish.json in Resources */,
 				319D2FCA1F8797510085B99E /* SearchResultTableViewCell.xib in Resources */,
 				DCA2964D1F1E339200FF4E3A /* LaunchScreen.storyboard in Resources */,
+				C0669D9A1FA8BEDA00349A2C /* m-com_interstitial_welcome-back.json in Resources */,
+				C0669D991FA8BEDA00349A2C /* m-com_interstitial_sending.json in Resources */,
+				C0669D941FA8BEDA00349A2C /* check.json in Resources */,
 				DCB9CAC81F3C5FB100C4659D /* GiftCardCollectionViewCell.xib in Resources */,
 				DC55992E1F6821BD002CA399 /* StoreCategoryTableViewCell.xib in Resources */,
 				DC6DED6A1F2A0BA50034B2B0 /* FeaturedStoreTableViewCell.xib in Resources */,
 				DC6DED5E1F29F9150034B2B0 /* JTSTabBarView.xib in Resources */,
+				C0669DA01FA8BEDA00349A2C /* welcome_to_5.json in Resources */,
+				C0669D9B1FA8BEDA00349A2C /* my-rebates-tab_animation.json in Resources */,
+				C0669D981FA8BEDA00349A2C /* loader_ring.json in Resources */,
+				C0669D951FA8BEDA00349A2C /* check_solid_stop.json in Resources */,
+				C0669D9D1FA8BEDA00349A2C /* searching_for_rebates.json in Resources */,
+				C0669DA21FA8E2D300349A2C /* LoadingView.xib in Resources */,
 				DCE1E4DD1F2B538600CF29DC /* FeaturedStoreTableViewCell-Small.xib in Resources */,
 				C01CCC7C1F999F070033F5CD /* Dinar_Back_Intro.mp4 in Resources */,
 				DC6DED761F2A16990034B2B0 /* ProductCollectionViewCell.xib in Resources */,
 				DCA296451F1E339200FF4E3A /* Main.storyboard in Resources */,
+				C0669D971FA8BEDA00349A2C /* loader_data.json in Resources */,
 				DCB9CAD21F3DB81E00C4659D /* GiftCardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,10 +568,8 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONKit/JSONKit.framework",
-				"${BUILT_PRODUCTS_DIR}/PKGIFHUD/PKGIFHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -528,10 +586,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKGIFHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +640,7 @@
 				DCA2967F1F1E59AC00FF4E3A /* BaseViewController.swift in Sources */,
 				DCB9CAC61F3C5FA600C4659D /* GiftCardCollectionViewCell.swift in Sources */,
 				DC50264D1F236830004F7EE7 /* WelcomeViewController.swift in Sources */,
+				C0669DA41FA8E31A00349A2C /* LoadingView.swift in Sources */,
 				DCD5F8011F5582D800425FAF /* ChooseFavoritesViewController.swift in Sources */,
 				DC3E94291F4DD50E0098918F /* RequestBody+Extension.swift in Sources */,
 				DC6DED461F29DB880034B2B0 /* ProductViewController.swift in Sources */,
@@ -652,7 +709,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA296441F1E339200FF4E3A /* Base */,
-				4E59261B1FA95337004DC3E8 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -661,7 +717,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA2964C1F1E339200FF4E3A /* Base */,
-				4E5926191FA95337004DC3E8 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -670,7 +725,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA2967A1F1E348600FF4E3A /* Base */,
-				4E59261A1FA95337004DC3E8 /* ar */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
@@ -682,7 +736,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -735,7 +788,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -784,7 +836,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EMPCT86ARG;
+				DEVELOPMENT_TEAM = 4W972XBT8Y;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -792,7 +844,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miro.DinarBackBeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scanovator.ordereta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -811,14 +863,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EMPCT86ARG;
+				DEVELOPMENT_TEAM = 4W972XBT8Y;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dinar Back/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miro.DinarBackBeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scanovator.ordereta1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
