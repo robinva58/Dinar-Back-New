@@ -47,7 +47,6 @@
       CGPathAddPath(pathRef, NULL, path.CGPath);
       self.path = pathRef;
       self.fillRule = @"even-odd";
-      CGPathRelease(pathRef);
     } else {
       self.path = path.CGPath;
     }
