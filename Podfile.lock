@@ -55,7 +55,6 @@ PODS:
   - FBSDKShareKit (4.23.0):
     - FBSDKCoreKit
   - JSONKit (1.4)
-  - lottie-ios (2.1.4)
   - PKGIFHUD (1.0.2)
   - PureLayout (3.0.2)
   - Reachability (3.2)
@@ -70,7 +69,6 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - JSONKit
-  - lottie-ios
   - PKGIFHUD
   - PureLayout
   - SVProgressHUD
@@ -88,12 +86,11 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   FBSDKShareKit: 65751c3b9937ab9d594e6c37611ecc115ceeb448
   JSONKit: 5b69e804ea54d99293eed0fd2ce596c5703fefb0
-  lottie-ios: 94fa2d82547ce3adf1e61157653ba99999fd279f
   PKGIFHUD: 9f04ff349c17b12869d7ca68bb039100655990d1
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: d2e6055ea7babf201a16d55a6a7f1fcc5c2e2614
+PODFILE CHECKSUM: c2933ec24e3a465490e5a6682587d482f6b29fbf
 
 COCOAPODS: 1.3.1
