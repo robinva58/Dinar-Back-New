@@ -1973,11 +1973,11 @@ Tap  to add stores to your favorites.</string>
                     <navigationItem key="navigationItem" id="JnT-Ln-q87">
                         <nil key="title"/>
                         <view key="titleView" opaque="NO" contentMode="scaleToFill" id="W9h-yl-Whn">
-                            <rect key="frame" x="17.5" y="5.5" width="340" height="33"/>
+                            <rect key="frame" x="17" y="5.5" width="341" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search retailers &amp; rebates" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-Xl-XUB">
-                                    <rect key="frame" x="0.0" y="-12" width="340" height="56"/>
+                                    <rect key="frame" x="0.0" y="-12" width="341" height="56"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -3797,10 +3797,10 @@ Tap  on any rebate to add it to this list.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QyZ-My-hs3"/>
-        <segue reference="haX-6S-yft"/>
+        <segue reference="Y0g-II-22E"/>
         <segue reference="leY-oc-Llx"/>
         <segue reference="8a6-MC-zyw"/>
         <segue reference="vJd-4P-IIN"/>
-        <segue reference="dEx-DD-Knl"/>
+        <segue reference="eA2-jR-Sas"/>
     </inferredMetricsTieBreakers>
 </document>

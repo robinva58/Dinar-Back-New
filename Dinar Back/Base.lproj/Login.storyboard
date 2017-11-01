@@ -113,14 +113,24 @@
                                             <constraint firstAttribute="height" constant="34" id="bmn-w5-P8X"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7m-oQ-Jq6">
+                                        <rect key="frame" x="157" y="319.66666666666669" width="100" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="0Hd-sD-qYP"/>
+                                            <constraint firstAttribute="height" constant="40" id="b0s-jJ-77u"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PUq-f3-pYt" secondAttribute="bottom" constant="75" id="1Cf-2o-voS"/>
                                     <constraint firstItem="PUq-f3-pYt" firstAttribute="top" secondItem="Bj7-cP-cgA" secondAttribute="bottom" constant="22" id="3TC-nT-Yvn"/>
                                     <constraint firstItem="MBz-mN-Ctw" firstAttribute="centerX" secondItem="MSO-eA-9V0" secondAttribute="centerX" id="7EQ-I8-qQc"/>
+                                    <constraint firstItem="O7m-oQ-Jq6" firstAttribute="top" secondItem="EjT-ps-lgL" secondAttribute="bottom" constant="26.780000000000001" id="Hsb-wt-G5H"/>
                                     <constraint firstItem="Bj7-cP-cgA" firstAttribute="centerX" secondItem="PUq-f3-pYt" secondAttribute="centerX" id="OmU-xG-aY3"/>
                                     <constraint firstItem="ZuI-YF-1Zj" firstAttribute="centerX" secondItem="MBz-mN-Ctw" secondAttribute="centerX" id="U6X-Vs-phn"/>
+                                    <constraint firstItem="O7m-oQ-Jq6" firstAttribute="centerX" secondItem="MSO-eA-9V0" secondAttribute="centerX" id="Y3n-sz-zG4"/>
                                     <constraint firstItem="YKu-BF-CjC" firstAttribute="top" secondItem="MSO-eA-9V0" secondAttribute="top" constant="64" id="cHP-Ir-c7S"/>
                                     <constraint firstItem="YKu-BF-CjC" firstAttribute="centerX" secondItem="MSO-eA-9V0" secondAttribute="centerX" id="ceh-Oa-Ms4"/>
                                     <constraint firstAttribute="trailing" secondItem="PUq-f3-pYt" secondAttribute="trailing" constant="25" id="cnh-jD-xVQ"/>
@@ -291,13 +301,23 @@
                                     <constraint firstAttribute="height" constant="200" id="iEh-Ni-bZg"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bl3-be-ryv">
+                                <rect key="frame" x="147" y="270" width="120" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6Kc-mq-zRN"/>
+                                    <constraint firstAttribute="height" constant="60" id="UEd-PQ-JCu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Bl3-be-ryv" firstAttribute="top" secondItem="5RW-Id-8FI" secondAttribute="bottom" constant="6" id="BG9-dv-RJC"/>
                             <constraint firstItem="5RW-Id-8FI" firstAttribute="centerX" secondItem="0ew-w5-a3Y" secondAttribute="centerX" id="DSw-32-FO7"/>
                             <constraint firstItem="5RW-Id-8FI" firstAttribute="top" secondItem="RJh-io-4Il" secondAttribute="bottom" constant="44" id="EqS-Kh-dVz"/>
                             <constraint firstAttribute="bottom" secondItem="gWm-6W-LT0" secondAttribute="bottom" id="JCJ-Iz-xjg"/>
                             <constraint firstItem="gWm-6W-LT0" firstAttribute="leading" secondItem="0ew-w5-a3Y" secondAttribute="leading" id="bzn-HF-Adz"/>
+                            <constraint firstItem="Bl3-be-ryv" firstAttribute="centerX" secondItem="0ew-w5-a3Y" secondAttribute="centerX" id="cz0-LU-Vh3"/>
                             <constraint firstAttribute="trailing" secondItem="gWm-6W-LT0" secondAttribute="trailing" id="yCv-IJ-ftK"/>
                         </constraints>
                     </view>
@@ -305,6 +325,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="introAnimationBackgroundView" destination="Bl3-be-ryv" id="KlT-4A-P7n"/>
                         <outlet property="introVideoView" destination="0ew-w5-a3Y" id="UlL-mn-nYh"/>
                     </connections>
                 </viewController>

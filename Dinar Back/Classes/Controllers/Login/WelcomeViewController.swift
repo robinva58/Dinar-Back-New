@@ -14,18 +14,29 @@ import FBSDKLoginKit
 import AVKit
 import AVFoundation
 
+
 class WelcomeViewController: BaseViewController {
 
     @IBOutlet var introVideoView: UIView!
     var player: AVPlayer!
-    
+   
+    @IBOutlet weak var introAnimationBackgroundView: UIView!
+    var intro_animationview:LOTAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appWillEnterForegroundNotification),
                                                name: .UIApplicationWillEnterForeground, object: nil)
+        
+        intro_animationview = LOTAnimationView(name:"introduction_view_animation")
+        intro_animationview.loopAnimation = true
+//        self.intro_animationview.frame = self.introAnimationBackgroundView.bounds
+        self.intro_animationview.contentMode = UIViewContentMode.scaleAspectFill
+        self.introAnimationBackgroundView.addSubview(intro_animationview)
+        self.introAnimationBackgroundView.bringSubview(toFront: intro_animationview)
+        intro_animationview.play()
         
     }
     
@@ -84,61 +95,24 @@ class WelcomeViewController: BaseViewController {
         player.play()
     }
     
-    func automaticLogin(){
-        if let expireDate = UserDefaults.standard.object(forKey: UserAccessTokenExpireDate) as? Date{
-            if expireDate.isExpire(){
-//                SVProgressHUD.show()
-                PKGIFHUD.setGifWithImageName("Loading.gif")
-                PKGIFHUD.showWithOverlay()
-                RestAPI.shared.refreshAccessToken(completionHandler: { (success, data, error) in
-                    if(success){
-                        if(data != nil){
-                            AppDelegate.updateUserSessionData(data as! [String : Any])
-                            RestAPI.shared.getLoginData(completionHandler: { (success, data, error) in
-//                                SVProgressHUD.dismiss()
-                                PKGIFHUD.dismiss()
-                                if(success){
-                                    if(data != nil){
-                                        AppDelegate.loginSuccessful(data)
-                                    }
-                                }
-                            })
-                        }
-                    }else{
-//                        SVProgressHUD.dismiss()
-                        PKGIFHUD.dismiss()
-                    }
-                })
-            }else{
-//                SVProgressHUD.show()
-                PKGIFHUD.setGifWithImageName("Loading.gif")
-                PKGIFHUD.showWithOverlay()
-                RestAPI.shared.getLoginData(completionHandler: { (success, data, error) in
-//                    SVProgressHUD.dismiss()
-                    PKGIFHUD.dismiss()
-                    if(success){
-                        if(data != nil){
-                            AppDelegate.loginSuccessful(data)
-                        }
-                    }
-                })
-            }
-        }
-    }
     
     func loginWithFacebook(_ accessToken:AccessToken, fbDetails: NSDictionary){
-//        SVProgressHUD.show()
-        PKGIFHUD.setGifWithImageName("Loading.gif")
-        PKGIFHUD.showWithOverlay()
-        RestAPI.shared.facebookLogin(accessToken: accessToken.authenticationToken, fbDetails:fbDetails) { (success, data, error) in
-//            SVProgressHUD.dismiss()
-            PKGIFHUD.dismiss()
-            if(success){
-                if(data != nil){
-                    AppDelegate.loginSuccessful(data)
+
+        self.showProgressView()
+        
+        DispatchQueue.main.async {
+            
+            RestAPI.shared.facebookLogin(accessToken: accessToken.authenticationToken, fbDetails:fbDetails) { (success, data, error) in
+                
+                self.hideProgressView()
+                if(success){
+                    if(data != nil){
+                        AppDelegate.loginSuccessful(data)
+                    }
                 }
             }
         }
+        
     }
 
     @IBAction func fbLoginClicked(_ sender: UIButton) {

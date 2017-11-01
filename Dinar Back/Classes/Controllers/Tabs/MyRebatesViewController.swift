@@ -45,15 +45,14 @@ class MyRebatesViewController: BaseViewController, UICollectionViewDataSource, U
     }
     
     func fetchMyRebates(){
-//        SVProgressHUD.show()
-        PKGIFHUD.setGifWithImageName("Loading.gif")
-        PKGIFHUD.showWithOverlay()
+
+        self.showProgressView()
         RestAPI.shared.getMyRebates { (success, data, error) in
-//            SVProgressHUD.dismiss()
-            PKGIFHUD.dismiss()
-            if (success){
-                if data != nil{
-                    DispatchQueue.main.async {
+            DispatchQueue.main.async {
+            self.hideProgressView()
+                if (success){
+                    if data != nil{
+                        
                         if let object = data as? [[String:Any]]{
                             self.data = object
                             let hasRebates:Bool = object.count > 0
