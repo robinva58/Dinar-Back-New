@@ -125,8 +125,8 @@ class FeaturedStoreTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
         let productId:String = (cell.params["id"] as? String)!
         
 //        SVProgressHUD.show()
-        PKGIFHUD.setGifWithImageName("Loading.gif")
-        PKGIFHUD.showWithOverlay()
+//        PKGIFHUD.setGifWithImageName("Loading.gif")
+//        PKGIFHUD.showWithOverlay()
         if(shouldAdd){
             RestAPI.shared.saveRebate(storeId: storeId, productId: productId, completionHandler: { (success, data, error) in
                 //                SVProgressHUD.dismiss()
@@ -143,7 +143,7 @@ class FeaturedStoreTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
                             
                             
 //                            SVProgressHUD.dismiss()
-                            PKGIFHUD.dismiss()
+//                            PKGIFHUD.dismiss()
                         }
                     }
                 }
@@ -151,7 +151,7 @@ class FeaturedStoreTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
         }else{
             RestAPI.shared.removeRebate(storeId: storeId, productId: productId, completionHandler: { (success, data, error) in
 //                SVProgressHUD.dismiss()
-                PKGIFHUD.dismiss()
+//                PKGIFHUD.dismiss()
                 if(success){
                     DispatchQueue.main.async {
                         if data != nil{
@@ -163,7 +163,7 @@ class FeaturedStoreTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
                             method(self)
                         }else{
 //                            SVProgressHUD.dismiss()
-                            PKGIFHUD.dismiss()
+//                            PKGIFHUD.dismiss()
                         }
                     }
                 }

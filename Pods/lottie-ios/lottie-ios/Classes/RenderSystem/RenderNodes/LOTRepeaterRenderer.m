@@ -23,8 +23,8 @@
   CALayer *centerPoint_DEBUG;
 }
 
-- (instancetype)initWithInputNode:(LOTAnimatorNode *)inputNode
-                              shapeRepeater:(LOTShapeRepeater *)repeater {
+- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nonnull)inputNode
+                              shapeRepeater:(LOTShapeRepeater *_Nonnull)repeater {
   self = [super initWithInputNode:inputNode keyName:repeater.keyname];
   if (self) {
     _transformInterpolator = [[LOTTransformInterpolator alloc] initWithPosition:repeater.position.keyframes
