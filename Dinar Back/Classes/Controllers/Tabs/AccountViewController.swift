@@ -74,49 +74,50 @@ class AccountViewController: BaseViewController, UITableViewDataSource, UITableV
     }
     
     func getGiftCards(){
-
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.getGiftCards { (success, data, error) in
-            DispatchQueue.main.async {
-                self.hideProgressView()
-                if(success){
-                    if(data != nil){
-                        logPrint(data)
-                        if let object = data as? [String:Any]{
-                            self.data = object
-                            
-                                if let name = appDelegate.userInfo["first_name"] as? String{
-                                    self.nameLabel.text = String.init(format: "%@", name.capitalized)
-                                }
-                                if let lifeTimeEarnings = object["lifetime_earning"] as? String{
-                                    let string = NSMutableAttributedString(string: "$")
-                                    string.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(30.0), range: NSRange.init(location: 0, length: 1))
-                                    let price = NSMutableAttributedString(string: lifeTimeEarnings)
-                                    price.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(30.0), range: NSRange.init(location: 0, length: price.length))
-                                    string.append(price)
-                                    self.lifetimeEarningsLabel.attributedText = string
-                                }
-                                if let balance = object["balance"] as? String{
-                                    let string = NSMutableAttributedString(string: "$")
-                                    string.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(28.0), range: NSRange.init(location: 0, length: 1))
-                                    let price = NSMutableAttributedString(string: balance)
-                                    price.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(28.0), range: NSRange.init(location: 0, length: price.length))
-                                    string.append(price)
-                                    let location = string.length
-                                    string.append(NSAttributedString(string:"\navailable for withdrawal"))
-                                    let length = string.length - location
-                                    string.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(15.0), range: NSRange.init(location: location, length: length))
-                                    
-                                    string.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange.init(location: 0, length: string.length - 1))
-                                    self.availableBalanceLabel.attributedText = string
-                                }
-                                if let gifts = object["data"] as? [[String:Any]]{
-                                    self.giftCards = gifts
-                                    self.tableVw.reloadData()
-                                }
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if(success){
+                if(data != nil){
+                    logPrint(data)
+                    if let object = data as? [String:Any]{
+                        self.data = object
+                        DispatchQueue.main.async {
+                            if let name = appDelegate.userInfo["first_name"] as? String{
+                                self.nameLabel.text = String.init(format: "%@", name.capitalized)
+                            }
+                            if let lifeTimeEarnings = object["lifetime_earning"] as? String{
+                                let string = NSMutableAttributedString(string: "$")
+                                string.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(30.0), range: NSRange.init(location: 0, length: 1))
+                                let price = NSMutableAttributedString(string: lifeTimeEarnings)
+                                price.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(30.0), range: NSRange.init(location: 0, length: price.length))
+                                string.append(price)
+                                self.lifetimeEarningsLabel.attributedText = string
+                            }
+                            if let balance = object["balance"] as? String{
+                                let string = NSMutableAttributedString(string: "$")
+                                string.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(28.0), range: NSRange.init(location: 0, length: 1))
+                                let price = NSMutableAttributedString(string: balance)
+                                price.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(28.0), range: NSRange.init(location: 0, length: price.length))
+                                string.append(price)
+                                let location = string.length
+                                string.append(NSAttributedString(string:"\navailable for withdrawal"))
+                                let length = string.length - location
+                                string.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(15.0), range: NSRange.init(location: location, length: length))
+                                
+                                string.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange.init(location: 0, length: string.length - 1))
+                                self.availableBalanceLabel.attributedText = string
+                            }
+                            if let gifts = object["data"] as? [[String:Any]]{
+                                self.giftCards = gifts
+                                self.tableVw.reloadData()
                             }
                         }
                     }
+                }
             }
         }
     }

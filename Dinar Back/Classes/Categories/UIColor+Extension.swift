@@ -11,8 +11,7 @@ import UIKit
 extension UIColor{
     
     static func appGreenColor() -> UIColor {
-//        return UIColor(red: 176.0/255.0, green: 11.0/255.0, blue: 55.0/255.0, alpha: 1.0)
-        return UIColor(red: 82.0/255.0, green: 160.0/255.0, blue: 160.0/255.0, alpha: 1.0)
+        return UIColor(red: 39.0/255.0, green: 147.0/255.0, blue: 142.0/255.0, alpha: 1.0)
     }
     
     static func appGrayColor() -> UIColor {
@@ -20,7 +19,7 @@ extension UIColor{
     }
     
     static func buttonDisabledBackgroundColor() -> UIColor {
-        return UIColor(red: 176.0/255.0, green: 11.0/255.0, blue: 55.0/255.0, alpha: 1.0)
+        return UIColor(red: 238.0/255.0, green: 240.0/255.0, blue: 245.0/255.0, alpha: 1.0)
     }
     
     static func buttonDisabledTitleColor() -> UIColor {

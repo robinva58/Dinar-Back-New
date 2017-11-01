@@ -200,7 +200,9 @@ class SignUpProfileViewController: LoginUIControlsViewController, UITableViewDat
     
     @IBAction func signUpClicked(){
         self.view.endEditing(true)
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         var dateOfBirth:String! = nil
         if(!(dobCell.textField.text?.isEmpty)!){
             let dateFormatter = DateFormatter()
@@ -212,32 +214,30 @@ class SignUpProfileViewController: LoginUIControlsViewController, UITableViewDat
         
         if(updateProfile){
             RestAPI.shared.updateProfile(email: emailCell.textField.text!, firstName: firstNameCell.textField.text!, lastName: lastNameCell.textField.text!, dateOfBirth: dateOfBirth, gender: genderCell.textField.text!, completionHandler: { (success, data, error) in
-                 DispatchQueue.main.async {
-                    self.hideProgressView()
-                    if(success){
-                       
-                            appDelegate.userInfo["email"] = self.emailCell.textField.text!
-                            appDelegate.userInfo["first_name"] = self.firstNameCell.textField.text!
-                            appDelegate.userInfo["last_name"] = self.lastNameCell.textField.text!
-                            appDelegate.userInfo["gender"] = self.genderCell.textField.text!
-                            appDelegate.userInfo["dob"] = dateOfBirth
+//                SVProgressHUD.dismiss()
+                PKGIFHUD.dismiss()
+                if(success){
+                    DispatchQueue.main.async {
+                        appDelegate.userInfo["email"] = self.emailCell.textField.text!
+                        appDelegate.userInfo["first_name"] = self.firstNameCell.textField.text!
+                        appDelegate.userInfo["last_name"] = self.lastNameCell.textField.text!
+                        appDelegate.userInfo["gender"] = self.genderCell.textField.text!
+                        appDelegate.userInfo["dob"] = dateOfBirth
                         
-                            self.navigationController?.popViewController(animated: true)
-                        }
+                        self.navigationController?.popViewController(animated: true)
+                    }
                 }
             })
         }else{
-            DispatchQueue.main.async {
-                RestAPI.shared.signUp(email: self.emailCell.textField.text!, password: self.passwordCell.textField.text!, firstName: self.firstNameCell.textField.text!, lastName: self.lastNameCell.textField.text!, dateOfBirth: dateOfBirth, gender: self.genderCell.textField.text!, completionHandler: { (success, data, error) in
-                    self.hideProgressView()
-                    if(success){
-                        if data != nil{
-                            AppDelegate.loginSuccessful(data)
-                        }
+            RestAPI.shared.signUp(email: emailCell.textField.text!, password: passwordCell.textField.text!, firstName: firstNameCell.textField.text!, lastName: lastNameCell.textField.text!, dateOfBirth: dateOfBirth, gender: genderCell.textField.text!, completionHandler: { (success, data, error) in
+//                SVProgressHUD.dismiss()
+                PKGIFHUD.dismiss()
+                if(success){
+                    if data != nil{
+                        AppDelegate.loginSuccessful(data)
                     }
-                })
-            }
-            
+                }
+            })
         }
     }
 }
