@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StoreCategoryTableViewCell" id="uWF-h6-fr6" customClass="StoreCategoryTableViewCell" customModule="Dinar_Back" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uWF-h6-fr6" id="y4X-Vd-nnC">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ScT-Xx-YV5" customClass="AsyncImageView">
+                        <rect key="frame" x="8" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="qlz-iZ-IcI"/>
+                            <constraint firstAttribute="height" constant="50" id="qno-tW-AV4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTs-sh-wOD">
+                        <rect key="frame" x="66" y="10" width="0.0" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="mLj-j3-HFI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 new" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRl-SY-EBl">
+                        <rect key="frame" x="327" y="5" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="B6Y-Md-Lin"/>
+                            <constraint firstAttribute="height" constant="15" id="qWC-wE-s4F"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ScT-Xx-YV5" firstAttribute="leading" secondItem="y4X-Vd-nnC" secondAttribute="leading" constant="8" id="7d9-aF-zlz"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NTs-sh-wOD" secondAttribute="bottom" constant="1.5" id="APK-DN-tce"/>
+                    <constraint firstItem="NTs-sh-wOD" firstAttribute="leading" secondItem="ScT-Xx-YV5" secondAttribute="trailing" constant="8" id="WZ6-Jn-o5Z"/>
+                    <constraint firstItem="YRl-SY-EBl" firstAttribute="top" secondItem="y4X-Vd-nnC" secondAttribute="top" constant="5" id="cjD-Eu-geI"/>
+                    <constraint firstItem="NTs-sh-wOD" firstAttribute="top" secondItem="y4X-Vd-nnC" secondAttribute="topMargin" constant="2" id="fX3-Ui-VsF"/>
+                    <constraint firstItem="ScT-Xx-YV5" firstAttribute="top" secondItem="y4X-Vd-nnC" secondAttribute="top" constant="5" id="h8W-DV-A0k"/>
+                    <constraint firstAttribute="trailing" secondItem="YRl-SY-EBl" secondAttribute="trailing" constant="8" id="kYp-Kg-gyr"/>
+                    <constraint firstAttribute="bottom" secondItem="ScT-Xx-YV5" secondAttribute="bottom" constant="4.5" id="vUw-x5-iWT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageVw" destination="ScT-Xx-YV5" id="sbE-Do-8dX"/>
+                <outlet property="newRebatesLabel" destination="YRl-SY-EBl" id="wjN-9W-z4S"/>
+                <outlet property="textLbl" destination="NTs-sh-wOD" id="ui3-uk-18g"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
