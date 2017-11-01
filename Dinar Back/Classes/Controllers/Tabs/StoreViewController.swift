@@ -84,13 +84,14 @@ class StoreViewController: BaseViewController, UIScrollViewDelegate, FeaturedSto
     //    MARK: -
     
     func getStoreData() {
-
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.getStoreProducts(storeId: storeId) { (success, data, error) in
             if(success){
                 DispatchQueue.main.async {
-
-                    self.hideProgressView()
+//                    SVProgressHUD.dismiss()
+                    PKGIFHUD.dismiss()
                     if data != nil{
                         self.data = data as! [String : Any]
                         self.products = (self.data["products"] as? [[String:Any]])!

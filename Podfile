@@ -10,13 +10,15 @@ def pods_list
     pod 'JSONKit'
 #    pod 'SnapKit', '~> 3.0'
     pod 'PureLayout'
+    pod 'SVProgressHUD'
+    pod 'lottie-ios'
     
     # Facebook
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
     
-    pod 'lottie-ios'
+    pod 'PKGIFHUD'
 end
 
 target 'Dinar Back' do

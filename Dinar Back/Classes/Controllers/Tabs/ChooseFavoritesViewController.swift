@@ -42,15 +42,16 @@ class ChooseFavoritesViewController: BaseViewController, UICollectionViewDataSou
     }
     
     func fetchAllStores(){
-
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.getAllStores(completionHandler: { (success, data, error) in
-            
-            DispatchQueue.main.async {
-                self.hideProgressView()
-                 if(success){
-                    if data != nil{
-                        self.stores = (data as? [[String:Any]])!
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if(success){
+                if data != nil{
+                    self.stores = (data as? [[String:Any]])!
+                    DispatchQueue.main.async {
                         self.collectionVw.reloadData()
                     }
                 }
@@ -93,20 +94,19 @@ class ChooseFavoritesViewController: BaseViewController, UICollectionViewDataSou
     }
     
     @IBAction func nextClicked(_ sender: JTSFormButton) {
-        
-        self.showProgressView()
-        
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.addFavoriteStores(stores: favorites, completionHandler: { (success, data, error) in
-            
-            DispatchQueue.main.async {
-                
-                self.hideProgressView()
-                if(success){
-                    if data != nil{
-                        appDelegate.userInfo["favourite_stores"] = data
-                        logPrint(appDelegate.userInfo)
-                        userDefaults.set(true, forKey: "favoritesAdded")
-                        userDefaults.synchronize()
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if(success){
+                if data != nil{
+                    appDelegate.userInfo["favourite_stores"] = data
+                    logPrint(appDelegate.userInfo)
+                    userDefaults.set(true, forKey: "favoritesAdded")
+                    userDefaults.synchronize()
+                    DispatchQueue.main.async {
                         self.dismiss(animated: true, completion: nil)
                     }
                 }
