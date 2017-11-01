@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 
 class LoginViewController: LoginUIControlsViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -41,20 +41,18 @@ class LoginViewController: LoginUIControlsViewController, UITableViewDataSource,
     
     @IBAction func loginClicked(){
         self.view.endEditing(true)
-
-        self.showProgressView()
-        DispatchQueue.main.async {
-            
-            RestAPI.shared.login(email: self.emailCell.textField.text!, password: self.passwordCell.textField.text!.encrypt()) { (success, data, error) in
-                self.hideProgressView()
-                if(success){
-                    if data != nil{
-                        AppDelegate.loginSuccessful(data)
-                    }
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
+        RestAPI.shared.login(email: emailCell.textField.text!, password: passwordCell.textField.text!.encrypt()) { (success, data, error) in
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if(success){
+                if data != nil{
+                    AppDelegate.loginSuccessful(data)
                 }
             }
         }
-        
     }
 
 }

@@ -102,20 +102,21 @@ class ProductViewController: BaseViewController {
     }
     
     func getProductDetails() {
-
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.getProductDetails(productId: self.productId) { (success, data, error) in
-
-            DispatchQueue.main.async {
-                self.hideProgressView()
-                if (success){
-                    if (data != nil){
-                        logPrint(data)
-                              if let dataObject = data as? [String:Any]{
-                                self.populateProductsData(dataObject)
-                            }
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if (success){
+                if (data != nil){
+                    logPrint(data)
+                    DispatchQueue.main.async {
+                        if let dataObject = data as? [String:Any]{
+                            self.populateProductsData(dataObject)
                         }
                     }
+                }
             }
         }
     }

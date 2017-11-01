@@ -36,20 +36,21 @@ class StoresForCategoryViewController: BaseViewController, UITableViewDataSource
 //    MARK: -
     
     func fetchStores(){
-
-        self.showProgressView()
+//        SVProgressHUD.show()
+        PKGIFHUD.setGifWithImageName("Loading.gif")
+        PKGIFHUD.showWithOverlay()
         RestAPI.shared.getStoresForCategory(categoryId: self.storeCategoryId) { (success, data, error) in
-            DispatchQueue.main.async {
-                self.hideProgressView()
-                if (success){
-                    if data != nil{
-                        self.stores = data as! [[String:Any]]
-                        logPrint(self.stores)
-                        
-                            if(self.stores.count > 0){
-                                self.title = self.stores[0]["category"] as? String
-                                self.tableVw.reloadData()
-                            }
+//            SVProgressHUD.dismiss()
+            PKGIFHUD.dismiss()
+            if (success){
+                if data != nil{
+                    self.stores = data as! [[String:Any]]
+                    logPrint(self.stores)
+                    DispatchQueue.main.async {
+                        if(self.stores.count > 0){
+                            self.title = self.stores[0]["category"] as? String
+                            self.tableVw.reloadData()
+                        }
                     }
                 }
             }

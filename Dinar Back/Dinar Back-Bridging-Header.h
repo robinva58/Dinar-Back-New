@@ -9,6 +9,7 @@
 //@import FBSDKLoginKit;
 //@import FBSDKShareKit;
 @import PureLayout;
-@import Lottie;
+@import SVProgressHUD;
+@import PKGIFHUD;
 
 #include <ifaddrs.h>
