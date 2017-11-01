@@ -11,6 +11,7 @@ def pods_list
 #    pod 'SnapKit', '~> 3.0'
     pod 'PureLayout'
     pod 'SVProgressHUD'
+    pod 'lottie-ios'
     
     # Facebook
     pod 'FacebookCore'

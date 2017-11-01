@@ -96,6 +96,9 @@
 		319D2FC71F8797510085B99E /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		319D2FC81F8797510085B99E /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		31AE5CCF1F90FFCC00C3D263 /* BarCodeEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeEnterViewController.swift; sourceTree = "<group>"; };
+		4E5926191FA95337004DC3E8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4E59261A1FA95337004DC3E8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Login.strings; sourceTree = "<group>"; };
+		4E59261B1FA95337004DC3E8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		8D51AA7E58BEE0D0D5B82C07 /* Pods-Dinar Back.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinar Back.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dinar Back/Pods-Dinar Back.debug.xcconfig"; sourceTree = "<group>"; };
 		B9A1CFE829A036375E9CCC36 /* Pods_Dinar_Back.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinar_Back.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01CCC7B1F999F070033F5CD /* Dinar_Back_Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dinar_Back_Intro.mp4; sourceTree = "<group>"; };
@@ -433,7 +436,7 @@
 				TargetAttributes = {
 					DCA2963B1F1E339200FF4E3A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4W972XBT8Y;
+						DevelopmentTeam = EMPCT86ARG;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -509,6 +512,7 @@
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -528,6 +532,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -647,6 +652,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA296441F1E339200FF4E3A /* Base */,
+				4E59261B1FA95337004DC3E8 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -655,6 +661,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA2964C1F1E339200FF4E3A /* Base */,
+				4E5926191FA95337004DC3E8 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -663,6 +670,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA2967A1F1E348600FF4E3A /* Base */,
+				4E59261A1FA95337004DC3E8 /* ar */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
@@ -674,6 +682,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -726,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -774,7 +784,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4W972XBT8Y;
+				DEVELOPMENT_TEAM = EMPCT86ARG;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -782,7 +792,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scanovator.ordereta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miro.DinarBackBeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -801,14 +811,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4W972XBT8Y;
+				DEVELOPMENT_TEAM = EMPCT86ARG;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dinar Back/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scanovator.ordereta1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miro.DinarBackBeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
