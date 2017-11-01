@@ -18,8 +18,8 @@
   NSArray *_dashPatternInterpolators;
 }
 
-- (instancetype)initWithInputNode:(LOTAnimatorNode *)inputNode
-                                shapeStroke:(LOTShapeStroke *)stroke {
+- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nonnull)inputNode
+                                shapeStroke:(LOTShapeStroke *_Nonnull)stroke {
   self = [super initWithInputNode:inputNode keyName:stroke.keyname];
   if (self) {
     _colorInterpolator = [[LOTColorInterpolator alloc] initWithKeyframes:stroke.color.keyframes];

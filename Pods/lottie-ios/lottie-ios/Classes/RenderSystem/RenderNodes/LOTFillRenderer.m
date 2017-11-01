@@ -18,8 +18,8 @@
   CALayer *centerPoint_DEBUG;
 }
 
-- (instancetype)initWithInputNode:(LOTAnimatorNode *)inputNode
-                                  shapeFill:(LOTShapeFill *)fill {
+- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nonnull)inputNode
+                                  shapeFill:(LOTShapeFill *_Nonnull)fill {
   self = [super initWithInputNode:inputNode keyName:fill.keyname];
   if (self) {
     colorInterpolator_ = [[LOTColorInterpolator alloc] initWithKeyframes:fill.color.keyframes];

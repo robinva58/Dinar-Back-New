@@ -27,39 +27,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Rewarded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS9-2y-jOg">
+                                <rect key="frame" x="122" y="272" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G2x-vJ-ZHg"/>
+                                    <constraint firstAttribute="width" constant="130" id="gJR-Fn-Daa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed &amp; Built in Denver, CO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-lm-UNX">
+                                <rect key="frame" x="86.5" y="620.5" width="202" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="tD7-RO-LeE">
-                                <rect key="frame" x="87" y="65" width="200" height="200"/>
+                                <rect key="frame" x="87" y="64" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="7g3-XD-M7m"/>
                                     <constraint firstAttribute="height" constant="200" id="GMv-Ib-Pdd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get cash back on every purchase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw7-0Y-L4t">
-                                <rect key="frame" x="8" y="275" width="359" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="359" id="FP1-hp-pEU"/>
-                                    <constraint firstAttribute="height" constant="20" id="XWo-ED-pZ5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
-                                <color key="textColor" red="0.92549019610000005" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed &amp; Built in Baghdad, Iraq" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-lm-UNX">
-                                <rect key="frame" x="109" y="638" width="156" height="14"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
-                                <color key="textColor" red="0.92549019607843142" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.31764705882352939" green="0.62745098039215685" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hGQ-lm-UNX" secondAttribute="bottom" constant="15" id="81C-tt-xJn"/>
-                            <constraint firstItem="Hw7-0Y-L4t" firstAttribute="top" secondItem="tD7-RO-LeE" secondAttribute="bottom" constant="10" id="CrB-c1-yYX"/>
-                            <constraint firstItem="Hw7-0Y-L4t" firstAttribute="centerX" secondItem="tD7-RO-LeE" secondAttribute="centerX" id="H5c-oi-DLD"/>
-                            <constraint firstItem="tD7-RO-LeE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TW7-hh-LaL"/>
                             <constraint firstItem="tD7-RO-LeE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dEx-Tj-byc"/>
-                            <constraint firstItem="tD7-RO-LeE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="65" id="fbs-Ms-x8t"/>
+                            <constraint firstItem="aS9-2y-jOg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dXG-mN-XU1"/>
+                            <constraint firstItem="tD7-RO-LeE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="44" id="fbs-Ms-x8t"/>
+                            <constraint firstItem="aS9-2y-jOg" firstAttribute="top" secondItem="tD7-RO-LeE" secondAttribute="bottom" constant="8" id="gpT-dm-BnS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hGQ-lm-UNX" secondAttribute="bottom" constant="27" id="jwf-7u-zSh"/>
                             <constraint firstItem="hGQ-lm-UNX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tD6-JP-KP5"/>
                         </constraints>
                     </view>
