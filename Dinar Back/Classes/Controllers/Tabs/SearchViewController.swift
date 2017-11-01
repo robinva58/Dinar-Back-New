@@ -200,9 +200,8 @@ class SearchViewController: BaseViewController, UITableViewDataSource, UITableVi
     // Mark :- Selector
     
     func searchForKeyword(keyword:String){
-//        SVProgressHUD.show()
-        PKGIFHUD.setGifWithImageName("Loading.gif")
-        PKGIFHUD.showWithOverlay()
+
+        self.showProgressView()
         RestAPI.shared.getSearchResult(searchKeyword: keyword, filter: self.filterKey, completionHandler: { (success, data, error) in
             self.searchResultData = []
             if let responseData = data as? [String:Any]{
@@ -228,8 +227,8 @@ class SearchViewController: BaseViewController, UITableViewDataSource, UITableVi
                 }
             }
             DispatchQueue.main.async {
-//                SVProgressHUD.dismiss()
-                PKGIFHUD.dismiss()
+
+                self.hideProgressView()
                 if (self.searchResultData?.count)! > 0{
                     self.showNoResultFoundView(show: false)
                 }else{
@@ -295,34 +294,32 @@ class SearchViewController: BaseViewController, UITableViewDataSource, UITableVi
                         let data = sectionData[sender.tag]
                         if let productId = data["id"] as? String{
                             if let storeId = data["id_shop"] as? String{
-//                                SVProgressHUD.show()
-                                PKGIFHUD.setGifWithImageName("Loading.gif")
-                                PKGIFHUD.showWithOverlay()
                                 
+                                self.showProgressView()
                                 if(self.isProductAddedInRebate(productId: productId)){
                                     RestAPI.shared.removeRebate(storeId:storeId, productId:productId, completionHandler: { (success, data, error) in
-//                                        SVProgressHUD.dismiss()
-                                        PKGIFHUD.dismiss()
-                                        if(success){
-                                            if data != nil{
-                                                appDelegate.userInfo["applied_rebates"] = data
-                                                logPrint(appDelegate.userInfo)
-                                                DispatchQueue.main.async {
-                                                    self.tableVw.reloadData()
+                                        DispatchQueue.main.async {
+                                            self.hideProgressView()
+                                            if(success){
+                                                if data != nil{
+                                                    appDelegate.userInfo["applied_rebates"] = data
+                                                    logPrint(appDelegate.userInfo)
+                                                     self.tableVw.reloadData()
                                                 }
                                             }
                                         }
                                     })
                                 }else{
                                     RestAPI.shared.saveRebate(storeId:storeId, productId:productId, completionHandler: { (success, data, error) in
-//                                        SVProgressHUD.dismiss()
-                                        PKGIFHUD.dismiss()
-                                        if(success){
-                                            if data != nil{
-                                                appDelegate.userInfo["applied_rebates"] = data
-                                                logPrint(appDelegate.userInfo)
-                                                DispatchQueue.main.async {
-                                                    self.tableVw.reloadData()
+
+                                        DispatchQueue.main.async {
+                                            self.hideProgressView()
+                                            if(success){
+                                                if data != nil{
+                                                    appDelegate.userInfo["applied_rebates"] = data
+                                                    logPrint(appDelegate.userInfo)
+                                                    
+                                                        self.tableVw.reloadData()
                                                 }
                                             }
                                         }
@@ -346,19 +343,17 @@ class SearchViewController: BaseViewController, UITableViewDataSource, UITableVi
                     if let sectionData = sectionItem["section_data"] as? [[String:Any]]{
                         let data = sectionData[sender.tag]
                         if let id = data["id"] as? String{
-//                            SVProgressHUD.show()
-                            PKGIFHUD.setGifWithImageName("Loading.gif")
-                            PKGIFHUD.showWithOverlay()
-                            
+
+                            self.showProgressView()
                             if(self.isShopFavorite(shopId: id)){
                                 RestAPI.shared.removeFavoriteStores(stores: [id], completionHandler: { (success, data, error) in
-//                                    SVProgressHUD.dismiss()
-                                    PKGIFHUD.dismiss()
-                                    if(success){
-                                        if data != nil{
-                                            appDelegate.userInfo["favourite_stores"] = data
-                                            logPrint(appDelegate.userInfo)
-                                            DispatchQueue.main.async {
+                                    DispatchQueue.main.async {
+                                        self.hideProgressView()
+                                        if(success){
+                                            if data != nil{
+                                                appDelegate.userInfo["favourite_stores"] = data
+                                                logPrint(appDelegate.userInfo)
+                                                
                                                 self.tableVw.reloadData()
                                             }
                                         }
@@ -366,13 +361,13 @@ class SearchViewController: BaseViewController, UITableViewDataSource, UITableVi
                                 })
                             }else{
                                 RestAPI.shared.addFavoriteStores(stores: [id], completionHandler: { (success, data, error) in
-//                                    SVProgressHUD.dismiss()
-                                    PKGIFHUD.dismiss()
-                                    if(success){
-                                        if data != nil{
-                                            appDelegate.userInfo["favourite_stores"] = data
-                                            logPrint(appDelegate.userInfo)
-                                            DispatchQueue.main.async {
+                                     DispatchQueue.main.async {
+                                        self.hideProgressView()
+                                        if(success){
+                                            if data != nil{
+                                                appDelegate.userInfo["favourite_stores"] = data
+                                                logPrint(appDelegate.userInfo)
+                                               
                                                 self.tableVw.reloadData()
                                             }
                                         }

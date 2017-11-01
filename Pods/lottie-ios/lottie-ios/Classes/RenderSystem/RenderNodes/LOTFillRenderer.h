@@ -11,7 +11,7 @@
 
 @interface LOTFillRenderer : LOTRenderNode
 
-- (instancetype _Nonnull)initWithInputNode:(LOTAnimatorNode *_Nullable)inputNode
+- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nonnull)inputNode
                                   shapeFill:(LOTShapeFill *_Nonnull)fill;
 
 @end

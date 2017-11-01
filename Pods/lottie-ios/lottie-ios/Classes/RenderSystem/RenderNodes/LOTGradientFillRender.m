@@ -32,8 +32,8 @@
   LOTNumberInterpolator *_opacityInterpolator;
 }
 
-- (instancetype)initWithInputNode:(LOTAnimatorNode *)inputNode
-                          shapeGradientFill:(LOTShapeGradientFill *)fill {
+- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nonnull)inputNode
+                          shapeGradientFill:(LOTShapeGradientFill *_Nonnull)fill {
   self = [super initWithInputNode:inputNode keyName:fill.keyname];
   if (self) {
     _gradientInterpolator = [[LOTArrayInterpolator alloc] initWithKeyframes:fill.gradient.keyframes];

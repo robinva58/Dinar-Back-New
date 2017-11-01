@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -60,7 +60,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="93.5" height="34"/>
                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Offers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWH-ae-xoa">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Rebates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWH-ae-xoa">
                                     <rect key="frame" x="0.0" y="34" width="93.5" height="15"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
                                     <nil key="textColor"/>
@@ -90,7 +90,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="94" height="34"/>
                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Offers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJZ-wz-bzS">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Rebates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJZ-wz-bzS">
                                     <rect key="frame" x="0.0" y="34" width="94" height="15"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
                                     <nil key="textColor"/>
@@ -174,8 +174,8 @@
     <resources>
         <image name="accountNavIconActive" width="22" height="22"/>
         <image name="accountNavIconInactive" width="22" height="22"/>
-        <image name="featuredNavIconActive" width="23" height="20"/>
-        <image name="featuredNavIconInactive" width="23" height="20"/>
+        <image name="featuredNavIconActive" width="22" height="21"/>
+        <image name="featuredNavIconInactive" width="22" height="21"/>
         <image name="myRebatesNavIconActive" width="22" height="22"/>
         <image name="myRebatesNavIconInactive" width="22" height="22"/>
         <image name="searchNavIconActive" width="22" height="22"/>
